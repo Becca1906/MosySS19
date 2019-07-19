@@ -272,12 +272,7 @@ void loop() {
         }
       }
       if (Eingabe.charAt(1) == '1') {
-        // erster Scheinwerfer weiß, Rest aus
-        Umwandlung("weiss", 1);
-        DmxSimple.write(rpos, r);
-        DmxSimple.write(gpos, g);
-        DmxSimple.write(bpos, b);
-
+        // erster Scheinwerfer bleibt weiß, Rest aus
         for (int i = 4; i <= 12; i++) {
           DmxSimple.write(i, 0);
         }
